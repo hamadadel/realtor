@@ -1,16 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Pages
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForgetPassword from "./pages/ForgetPassword";
 import Offers from "./pages/Offers";
+// Components
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-2xl">Hello React</h1>
+    <>
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
@@ -20,7 +23,7 @@ function App() {
           <Route path="offers" element={<Offers />} />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 
